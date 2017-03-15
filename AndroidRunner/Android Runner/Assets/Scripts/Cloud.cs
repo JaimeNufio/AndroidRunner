@@ -15,7 +15,7 @@ public class Cloud : MonoBehaviour {
 			zPos = 1;
 		}
 
-		transform.position = new Vector3 (Random.Range(11,25),Random.Range(-5f,5f),zPos);
+		transform.position = new Vector3 (Random.Range(11,25),Random.Range(-9f,5f),zPos);
 		SpriteRenderer CloudSprite = transform.GetComponent (typeof(SpriteRenderer)) as SpriteRenderer;
 		int Place = (int)Mathf.Floor (Random.Range (0, 2.9f));
 
