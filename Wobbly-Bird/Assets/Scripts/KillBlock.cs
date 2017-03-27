@@ -21,7 +21,7 @@ public class KillBlock : MonoBehaviour {
 	void Update(){
 		timer += Time.deltaTime;
 
-		if (timer > max && Game_.health > 0) {
+		if (timer > max && Game_.health > 0 && Game_.gameStarted) {
 			timer = 0;
 			if (Random.Range (0, 10) < 6.5f) {
 				Vector3 pos = new Vector3 (Random.Range (12, 20), Random.Range (-4.5f, 4.5f), 0);

@@ -17,11 +17,15 @@ public class HealthBar : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!Game_.dead) {
+		if (!Game_.dead && Game_.gameStarted) {
 			int health = Game_.health;
 			muniesText.text = "" + Game_.munies;
 			gameOverText.text = "Final Score: " + Game_.munies;
 			//Debug.Log ("Health: " + health);
+
+			if (health > 6) {
+				health = 6;
+			}
 
 			if (health >= 4) {
 				Val1.Value = health - 4;

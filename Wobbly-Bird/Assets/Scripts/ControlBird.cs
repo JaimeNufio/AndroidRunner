@@ -6,11 +6,11 @@ public class ControlBird : MonoBehaviour {
 
 	public int healthTest;
 	public float yMin, yMax, xMin, xMax, speed;
-	public RectTransform Score,HUD;
+	public RectTransform Score,HUD,Title;
 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
@@ -30,12 +30,6 @@ public class ControlBird : MonoBehaviour {
 
 		if (Game_.dead) {
 			Rigidbody2D bard = transform.GetComponent (typeof(Rigidbody2D)) as Rigidbody2D;
-			MoveHud ScoreMover = Score.GetComponent (typeof(MoveHud)) as MoveHud;
-			MoveHud HudMover =  Score.GetComponent (typeof(MoveHud)) as MoveHud;
-			ScoreMover.goTo = new Vector3 (0,0,0);
-			HudMover.goTo = new Vector3 (0,600,0);
-			ScoreMover.moving = true;
-			HudMover.moving = true;
 			bard.gravityScale = 1;
 		}
 
