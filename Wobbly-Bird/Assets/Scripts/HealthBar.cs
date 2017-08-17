@@ -44,6 +44,11 @@ public class HealthBar : MonoBehaviour {
 			if (health == 0) {
 				Game_.dead = true;
 				Debug.Log ("Death");
+				int score = Game_.munies;
+				Game_.highscore = PlayerPrefs.GetInt ("highscore");
+				if (Game_.highscore < score) {
+					PlayerPrefs.SetInt ("highscore",score);
+				}
 			} else {
 				health = 0;
 			}

@@ -10,7 +10,8 @@ public class ControlBird : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		PlayerPrefs.SetInt ("highscore",Game_.munies);
+		Game_.highscore = PlayerPrefs.GetInt("highscore");
 	}
 	
 	// Update is called once per frame

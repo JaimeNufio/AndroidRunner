@@ -30,7 +30,7 @@ public class FlyLeft : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D obj){
 		Debug.Log ("bop");
-		if (obj.gameObject.tag == "bird" && move) {
+		if (obj.gameObject.tag == "bird" && move && Game_.gameStarted) {
 			Game_.health-=1;
 			Animator anim = transform.GetComponent(typeof(Animator)) as Animator; 
 			anim.enabled = false;
